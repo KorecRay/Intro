@@ -1,20 +1,35 @@
-section{
-  padding:120px 10%;
-  position:relative;
+section {
+  padding: 120px 10%;
+  position: relative;
 }
 
-h2{
-  font-size:36px;
-  margin-bottom:50px;
-  text-align:center;
+h2 {
+  font-size: 36px;
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-@media(max-width:768px){
-  section{
-    padding:80px 5%;
+@media(max-width:768px) {
+  section {
+    padding: 80px 5%;
   }
 
-  h2{
-    font-size:28px;
+  h2 {
+    font-size: 28px;
   }
+}
+
+nav div div::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: white;
+  transition: 0.25s;
+}
+
+nav div div:hover::after {
+  width: 100%;
 }

@@ -59,8 +59,11 @@ export default function ParticleBackground() {
 
         const animate = () => {
 
-            particles.rotation.y += mouseX * 0.003
-            particles.rotation.x += mouseY * 0.003
+            particles.rotation.y += 0.0001
+            particles.rotation.x += 0.0001
+
+            particles.rotation.y += mouseX * 0.0005
+            particles.rotation.x += mouseY * 0.0005
 
             renderer.render(scene, camera)
 

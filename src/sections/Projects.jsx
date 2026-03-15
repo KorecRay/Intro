@@ -1,7 +1,5 @@
 import { motion } from "framer-motion"
 import { projects } from "../data/projects"
-import profilePic from "../assets/images/profile.png"
-const images = import.meta.glob("../assets/images/projects/*.png", { eager: true })
 
 export default function Projects() {
     return (
@@ -27,7 +25,7 @@ export default function Projects() {
 
                         {/* preview image */}
                         <div style={imageWrapper}>
-                            <img src={profilePic} style={image} />
+                            <img src={p.image} style={image} />
                         </div>
 
                         {/* content */}
@@ -88,7 +86,9 @@ const card = {
     borderRadius: "18px",
     overflow: "hidden",
     boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
-    transition: "0.3s"
+    transition: "0.3s",
+    display: "flex",
+    flexDirection: "column"
 }
 
 const imageWrapper = {
@@ -104,7 +104,10 @@ const image = {
 }
 
 const content = {
-    padding: "20px"
+    padding: "20px",
+    display: "flex",
+    flexDirection: "column",
+    flexGrow: 1
 }
 
 const projectTitle = {
@@ -136,7 +139,8 @@ const tag = {
 
 const buttons = {
     display: "flex",
-    gap: "10px"
+    gap: "10px",
+    marginTop: "auto"
 }
 
 const githubBtn = {
